@@ -2,71 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme variables + resets */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg: #f8fafc;         /* light background */
+  --panel-bg: #ffffff;
+  --text: #e3e3e4;
+  --muted: #64748b;
+  --accent: #646cff;
+  --button-bg: #ffffff;
+
+  font-family: system-ui, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #071025;
+    --panel-bg: #0b1220;
+    --text: #e6eef8;
+    --muted: #9aa9bf;
+    --accent: #7c8bff;
+    --button-bg: #0f1724;
+  }
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
 }
 
+/* Allow pages to be full width (do NOT center the entire app) */
+body {
+  display: block;
+  min-height: 100vh;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* Links */
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--accent);
+  text-decoration: none;
 }
-a:hover {
-  color: #535bf2;
-}
+a:hover { text-decoration: underline; }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+/* Headings */
+h1 { font-size: 2.25rem; line-height: 1.1; margin: 0; }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/* Buttons default; prefer Tailwind in components */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 0.5rem 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-bg);
+  color: var(--text);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.2s, transform 0.08s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+button:hover { border-color: rgba(100,108,255,0.2); transform: translateY(-1px); }
+button:focus, button:focus-visible { outline: 4px auto -webkit-focus-ring-color; }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+/* small helpers */
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); white-space: nowrap; }
