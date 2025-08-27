@@ -25,14 +25,10 @@ This was built as a **Full-Stack Development Intern Mini Project** using **React
 * [React](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)
 * [Vite](https://vite.dev/) – build tool
 * [Tailwind CSS](https://tailwindcss.com/) – styling
-* [TanStack Router](https://tanstack.com/router) (optional) – routing
-* [TanStack Query](https://tanstack.com/query) (optional) – server state management
-* [Jotai](https://jotai.org/) (optional) – client state management
 
 ### Backend
 
-* [Pocketbase](https://pocketbase.io/) – backend with built-in SQLite database
-* Pocketbase JavaScript SDK for integration
+* [Pocketbase](https://pocketbase.io/) – backend
 
 ### Tools
 
@@ -68,7 +64,7 @@ Collection: `guests`
 | `created`       | date   | Yes      | Yes    | Auto-generated timestamp |
 
 🔹 CRUD permissions are configured.
-🔹 3–5 sample guest records are added in Pocketbase Admin UI.
+🔹 3 sample guest records are added in Pocketbase Admin UI.
 
 ---
 
@@ -79,7 +75,7 @@ Follow these steps to set up and run the project locally.
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/hotel-guest-management.git
+git clone https://github.com/AZKY12/hotel-guest-management.git
 cd hotel-guest-management
 ```
 
@@ -177,3 +173,4 @@ export default pb;
 ## 📜 License
 
 This project is built for **educational purposes** as part of a **Full-Stack Development Intern Mini Project**.
+
