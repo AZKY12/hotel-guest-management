@@ -148,29 +148,16 @@ export default pb;
 ## 📸 UI Pages
 
 * `/guests` → Guest list page
+  <img width="1438" height="727" alt="image" src="https://github.com/user-attachments/assets/e25a0475-252b-4e8a-8f85-6d39f15d8dba" />
 * `/guests/new` → Add new guest
+  <img width="1438" height="727" alt="image" src="https://github.com/user-attachments/assets/bb565d73-d3c3-45c1-b10b-1ca589b62069" />
 * `/guests/:id` → Guest detail/edit page
-
----
-
-## 🧪 Testing
-
-* Start Pocketbase server (`./pocketbase serve`)
-* Start React frontend (`npm run dev`)
-* Navigate through the pages and test CRUD operations.
-
----
-
-## 📌 Evaluation Criteria
-
-* **Functionality (40%)** – All required features working
-* **Code Quality (25%)** – Clean, modular, maintainable
-* **UI/UX (20%)** – Simple & intuitive desktop UI
-* **Integration (15%)** – Smooth Pocketbase–Frontend integration
+  <img width="1437" height="726" alt="image" src="https://github.com/user-attachments/assets/57102177-91f1-4a2b-82cb-109a33059b68" />
 
 ---
 
 ## 📜 License
 
 This project is built for **educational purposes** as part of a **Full-Stack Development Intern Mini Project**.
+
 
